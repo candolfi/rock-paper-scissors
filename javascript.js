@@ -28,6 +28,8 @@ function reAsk() {
     if(question.toLowerCase() != "rock" && question.toLowerCase() != "paper" && question.toLowerCase() != "scissors"){
         question = reAsk();
     }
+
+    return (question.toLowerCase());
 }
 
 function calculateWinner(computer, player) {
