@@ -88,8 +88,7 @@ function game() {
     let score = 0;
 
     for(i = 0; i < 5; i++) {
-        score = score + parseInt(rockPaperScissors());
-        console.log(score);
+        score = score + rockPaperScissors();
     }
 
     if(score > 0) {
