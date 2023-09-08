@@ -6,10 +6,13 @@
     </head>
 
     <body>
+        <div>
+            <button id="rock">Rock</button>
+            <button id="paper">Paper</button>
+            <button id="scissors">Scissors</button>
+        </div>
 
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
+        <div class="results"> Change this input according to which user wins</div>
 
         <!-- <script src="javascript.js"></script> -->
 
@@ -26,15 +29,12 @@
                 let randomInt = Math.floor(Math.random() * 3 + 1);
 
                 if(randomInt === 1){
-                    console.log(randomInt);
                     return ("rock")
                 }
                 else if(randomInt === 2){
-                    console.log(randomInt);
                     return ("paper")
                 }
                 else {
-                    console.log(randomInt);
                     return ("scissors")
                 }
             }
@@ -43,17 +43,18 @@
                 let winner = 0;
                 let player = getPlayerChoice(selection);
                 let computer = getComputerChoice();
+                const results = document.querySelector(".results");
                 if(player === "rock") {
                     if(computer === "rock") {
-                        alert("It is a tie!");
+                        results.innerHTML = "It is a tie!";
                         return (winner = 0);
                     }
                     else if(computer === "paper") {
-                        alert("Computer wins! Paper beats Rock");
+                        results.innerHTML = "Computer wins! Paper beats Rock";
                         return (winner = -1);
                     }
                     else {
-                        alert("You win! Rock beats Scissors");
+                        results.innerHTML = "You win! Rock beats Scissors";
                         return (winner = 1);
                     }
                 }
