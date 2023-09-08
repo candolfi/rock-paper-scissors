@@ -13,14 +13,22 @@ function getComputerChoice() {
     }
 }
 
+const rock = document.querySelectorAll("button");
+console.log(rock);
+rock.addEventListener("click", function() {
+    console.log("hello world")
+});
+
 function getPlayerChoice() {
-    let question = prompt("Please enter rock, paper or scissors");
+    // let question = prompt("Please enter rock, paper or scissors");
 
-    if(question.toLowerCase() != "rock" && question.toLowerCase() != "paper" && question.toLowerCase() != "scissors"){
-        question = reAsk();
-    }
+    // if(question.toLowerCase() != "rock" && question.toLowerCase() != "paper" && question.toLowerCase() != "scissors"){
+    //     question = reAsk();
+    // }
+    
 
-    return (question.toLowerCase());
+//     return (question.toLowerCase());
+console.log('testing');
 }
 
 function reAsk() {

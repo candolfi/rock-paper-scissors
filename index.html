@@ -6,6 +6,40 @@
     </head>
 
     <body>
-        <script src="javascript.js"></script>
+
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+
+        <!-- <script src="javascript.js"></script> -->
+
+        <script>
+            const rps = document.querySelectorAll("button");
+            // const paper = document.querySelector(".paper");
+            // const scissors = document.querySelector(".scissors")
+
+            rps.forEach(choice => choice.addEventListener("click", getPlayerChoice));
+
+            function getPlayerChoice(selection){
+                return (selection.target.id);
+            }
+
+            function getComputerChoice() {
+                let randomInt = Math.floor(Math.random() * 3 + 1);
+                let computerChoice = 0;
+
+                if(randomInt === 1){
+                    return (computerChoice = "rock")
+                }
+                else if(randomInt === 2){
+                    return (computerChoice = "paper")
+                }
+                else {
+                    return (computerChoice = "scissors")
+                }
+            }
+
+
+        </script>
     </body>
 </html>
