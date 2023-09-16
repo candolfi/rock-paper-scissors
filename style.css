@@ -8,9 +8,39 @@ body {
     display: flex;
     flex-direction: column;
     align-items:center;
+    background-color:blanchedalmond;
+}
+
+h1 {
+    font-size: 46px;
+}
+.results-row {
+    display: flex;
 }
 
 .results {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
 }
 
+.rps {
+    height: 150px;
+    width: 150px;
+    margin: 20px;
+    border-radius: 10px;
+    
+}
+
+.message {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.score {
+    border: 2px solid black;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
