@@ -35,6 +35,8 @@
         <script>
             const rps = document.querySelectorAll('.rps');
             rps.forEach(choice => choice.addEventListener("click", calculateWinner));
+            const replay = document.querySelector(".replay");
+            replay.addEventListener("click", reset);
 
             function getPlayerChoice(selection){
                 return (selection.target.id);
@@ -115,6 +117,13 @@
                 if(computerScore === 5){
                     results.innerHTML = "Computer wins! Better luck next time"
                 }
+            }
+
+            function reset(){
+                document.querySelector(".message").innerHTML = "";
+                document.querySelector(".computer").innerHTML = 0;
+                document.querySelector(".player").innerHTML = 0;
+
             }
 
 
