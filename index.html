@@ -63,51 +63,53 @@
                 let computerScore = parseInt(document.querySelector(".computer").innerHTML);
                 let playerScore = parseInt(document.querySelector(".player").innerHTML);
                 
-                if(player === "rock") {
-                    if(computer === "rock") {
-                        results.innerHTML = "It is a tie!";
+                if((computerScore < 5) && (playerScore < 5)){
+                    if(player === "rock") {
+                        if(computer === "rock") {
+                            results.innerHTML = "It is a tie!";
+                        }
+                        else if(computer === "paper") {
+                            results.innerHTML = "One point for computer! Paper beats Rock";
+                            computerScore++;
+                            document.querySelector(".computer").innerHTML = computerScore;
+                        }
+                        else {
+                            results.innerHTML = "One point for player! Rock beats Scissors";
+                            playerScore++;
+                            document.querySelector(".player").innerHTML = playerScore;
+                        }
                     }
-                    else if(computer === "paper") {
-                        results.innerHTML = "One point for computer! Paper beats Rock";
-                        computerScore++;
-                        document.querySelector(".computer").innerHTML = computerScore;
-                    }
-                    else {
-                        results.innerHTML = "One point for player! Rock beats Scissors";
-                        playerScore++;
-                        document.querySelector(".player").innerHTML = playerScore;
-                    }
-                }
 
-                else if(player === "paper") {
-                    if(computer === "paper") {
-                        results.innerHTML = "It is a tie!";
+                    else if(player === "paper") {
+                        if(computer === "paper") {
+                            results.innerHTML = "It is a tie!";
+                        }
+                        else if(computer === "scissors") {
+                            results.innerHTML = "One point for computer! Scissors beat Paper";
+                            computerScore++;
+                            document.querySelector(".computer").innerHTML = computerScore;
+                        }
+                        else {
+                            results.innerHTML = "One point for player! Paper beats Rock";
+                            playerScore++;
+                            document.querySelector(".player").innerHTML = playerScore;
+                        }
                     }
-                    else if(computer === "scissors") {
-                        results.innerHTML = "One point for computer! Scissors beat Paper";
-                        computerScore++;
-                        document.querySelector(".computer").innerHTML = computerScore;
-                    }
-                    else {
-                        results.innerHTML = "One point for player! Paper beats Rock";
-                        playerScore++;
-                        document.querySelector(".player").innerHTML = playerScore;
-                    }
-                }
 
-                else {
-                    if(computer === "scissors") {
-                        results.innerHTML = "It is a tie!";
-                    }
-                    else if(computer === "rock") {
-                        results.innerHTML = "One point for computer! Rock beats Scissors";
-                        computerScore++;
-                        document.querySelector(".computer").innerHTML = computerScore;
-                    }
                     else {
-                        results.innerHTML = "One point for player! Scissors beat Paper";
-                        playerScore++;
-                        document.querySelector(".player").innerHTML = playerScore;
+                        if(computer === "scissors") {
+                            results.innerHTML = "It is a tie!";
+                        }
+                        else if(computer === "rock") {
+                            results.innerHTML = "One point for computer! Rock beats Scissors";
+                            computerScore++;
+                            document.querySelector(".computer").innerHTML = computerScore;
+                        }
+                        else {
+                            results.innerHTML = "One point for player! Scissors beat Paper";
+                            playerScore++;
+                            document.querySelector(".player").innerHTML = playerScore;
+                        }
                     }
                 }
 
